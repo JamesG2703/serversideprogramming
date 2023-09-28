@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--
+Programmer: James
+Date: 2020
+Purpose: Part 1: PHP Programs, Exercise 4
+-->
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<title>Feedback.html</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  table {
+    border-collapse: collapse;
+}
+table, th, td {
+    border: 1px solid black;
+}
+</style>
+</head>
+
+<body>
+<iframe src="header.html" onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()"></iframe>
+<h1><u><center>Exercise 4</center></u></h1>
+<!--From for the user to enter their firstname, surname and age-->
+<form action="feedback.php" method="POST">
+<fieldset>
+<legend><b>Please enter your firstname, surname and age</b></legend> 
+<p><b>Firstname: <input type="text" name="Firstname"></b></p>
+<p><b>Surname: <input type="text" name="Surname"></b></p>
+<p><b>Age: <input type="text" name="Age"></b></p>
+</fieldset>
+<p><input type="submit"></p>
+</form>
+<a href="index.php">Back to home</a>
+</body>
+</html>

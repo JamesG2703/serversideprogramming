@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Choices</title>
+<style>
+body{
+font-family: Arial,sans-serif;background-color: #86bfc9;
+}
+#content {
+float:right; width: 75%;
+}
+table, td {
+border: 1px solid black;
+}
+</style>
+<script type = "text/javascript">
+function showit(what,where) //Function to show results
+{
+var node = document.getElementById(where);
+node.innerHTML = what;
+}
+function hello() //Function to display a hello message when prompted by the user
+{
+alert("I'm an ITSA degree student, \n get me out of here");
+}
+function timestable() //Function to display timestable when prompted by the user
+{
+str = "";
+for (c = 1; c <= 12; c++) {
+for (r = 1; r <= 12; r++) {
+str += r + " x " + c + " = " + r * c + "   ";
+}
+str += "<br />";
+}
+showit(str,"Results");
+}
+function alerttimestable() //Function to display timestable in an alert box when prompted by the user
+{
+str = "";
+for (c = 1; c <= 12; c++) {
+for (r = 1; r <= 12; r++) {
+str += r + " x " + c + " = " + r * c + "   ";
+}
+}
+alert(str);
+}
+function formattedtimestable() //Function to display timestable in a formatted table when prompted by the user
+{
+str="<table>";
+for (a = 1; a <= 12; a++) {
+str += "<tr>";
+for (b = 1; b <= 12; b++) {
+str += "<td>" + b + " x " + a + " = " + b * a + "</td>";
+}
+str += "</tr>";
+}
+str += "</table>";
+showit(str, "Results");
+}
+</script>
+</head>
+<body>
+<h1>Javascript Choices</h1>
+<div id="content"> <div id="Results"></div> </div>
+<!--Buttons to click on to display the results of the functions-->
+<a href="#" Onclick = "hello()">Hello Alert</a> <br/><br/>
+<a href="#" Onclick = "timestable()">Times Tables</a> <br/><br/>
+<a href="#" Onclick = "alerttimestable()">Times table in an alert box</a> <br/><br/>
+<a href="#" Onclick = "formattedtimestable()">Times table in a table</a> <br/><br/>
+<a href="index.php">Back to home</a> <br/><br/>
+</body>
+</html>

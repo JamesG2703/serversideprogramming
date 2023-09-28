@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--
+Programmer: James
+Date: 2020
+Purpose: Part 2: Javascript programs, Exercise 8
+-->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Toggle</title>
+<style>
+body{
+font-family: Arial,sans-serif;background-color: #86bfc9;
+}
+</style>
+<script type = "text/javascript">
+function imageHide(imageID, redID){ //Function to hide an image
+var image = document.getElementById(imageID);
+var red = document.getElementById(redID);
+image.style.display = "none";
+red.style.display = "";
+}
+function imageShow(redID, imageID){ //Function to show an image
+var image = document.getElementById(imageID);
+var red = document.getElementById(redID);
+image.style.display = "none";
+red.style.display = "";
+}
+</script>
+</head>
+<body>
+<h1>Javascript Toggle</h1>
+<!--Displays images, when clicked on they will be hidden and display a red block-->
+<div id="wrapper">
+<div id="red1" style="background-color:#cc0000; height: 50px; width:100px; display:none" onclick=" imageShow('red1', 'img1')"></div>
+<img src="image1.jpg" id="img1" onclick="imageHide('img1', 'red1');">
+<div id="red2" style="background-color:#cc0000; height: 50px; width:100px; display:none" onclick=" imageShow('red2', 'img2')"></div>
+<img src="image2.jpg" id="img2" onclick="imageHide('img2', 'red2');">
+<div id="red3" style="background-color:#cc0000; height: 50px; width:100px; display:none" onclick=" imageShow('red3', 'img3')"></div>
+<img src="image3.jpg" id="img3" onclick="imageHide('img3', 'red3');">
+</div>
+<a href="index.php">Back to home</a>
+</body>
+</html>
